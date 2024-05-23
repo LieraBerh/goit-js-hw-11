@@ -8,13 +8,17 @@ function pictureTemplate({
   downloads,
 }) {
   return `
-<li>
+<li class="gallery-item">
 <a class="gallery-link" href="${largeImageURL}">
-<img src="${webformatURL}" alt='${tags}'/>
-<p class="coin-title">Likes: ${likes}</p>
-<p class="coin-price">Views: ${views}</p>
-<p class="coin-title">Comments: ${comments}</p>
-<p class="coin-price"> Downloads: ${downloads}</p></a>
+<img src="${webformatURL}" alt='${tags}'class="gallery-image"/>
+</a>
+<div class="caption-wrapper">
+<p><span>Likes: </span>${likes}</p>
+<p><span>Views: </span>${views}</p>
+<p><span>Comments: </span>${comments}</p>
+<p><span>Downloads: </span>${downloads}</p>
+</div>
+
 </li>`;
 }
 export function picturesTemplate(arr) {
