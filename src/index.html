@@ -11,11 +11,16 @@
 
 <body>
   <form id="searchForm">
-    <input type="text" id="searchInput" name="query">
-    <button type="submit" id="submitButton"></button>
+    <input type="text" id="searchInput" name="query" />
+    <button type="submit" id="submitButton">submit</button>
   </form>
+
   <ul id="searchResults"></ul>
-  <span class="loader"></span>
+
+  <div class="loader-backdrop">
+    <span class="loader"></span>
+  </div>
+
   <script type="module" src="./main.js"></script>
 </body>
 
