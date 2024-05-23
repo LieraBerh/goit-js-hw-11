@@ -59,8 +59,10 @@ refs.formEl.addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(e) {
   e.preventDefault();
+
   refs.searchRes.innerHTML = '';
   showLoader();
+
   if (!refs.inputEl.value) {
     iziToast.error({
       title: 'Error',
@@ -82,14 +84,17 @@ function handleFormSubmit(e) {
         });
       }
       const markup = picturesTemplate(data);
+
       refs.searchRes.innerHTML = markup;
+
       lightbox.refresh();
+
       hideLoader();
     })
     .catch(err => {
       iziToast.error({
         title: 'Error',
-        message: 'Illegal operation',
+        message: err,
       });
       hideLoader();
     })

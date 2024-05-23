@@ -18,9 +18,9 @@ function pictureTemplate({
 <p><span>Comments: </span>${comments}</p>
 <p><span>Downloads: </span>${downloads}</p>
 </div>
-
 </li>`;
 }
+
 export function picturesTemplate(arr) {
   return arr.map(pictureTemplate).join('');
 }
